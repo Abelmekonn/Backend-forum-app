@@ -4,7 +4,7 @@ const mysql2 = require("mysql2");
 const dbConnectionPool = mysql2.createPool({
     user: process.env.USER,
     database:process.env.DB_NAME,
-    host: "localhost",
+    host: process.env.DB_HOST,
     connectionLimit: 10
 });
 console.log(process.env.DB_NAME)
